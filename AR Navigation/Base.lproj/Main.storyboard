@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AR_Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="N6S-9c-MFW">
+                                <rect key="frame" x="137" y="120" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5mh-CQ-1Fz"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K9r-oc-kqe">
+                                <rect key="frame" x="30" y="270" width="315" height="91"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usq-sG-Ury">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="16.5"/>
+                                        <color key="backgroundColor" red="0.52941176469999995" green="0.59607843140000005" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="TAKE ME TO">
+                                                <attributes>
+                                                    <color key="NSColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <font key="NSFont" size="14" name="AkzidenzGroteskStd-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" headerLevel="6"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maW-ey-eNI">
+                                        <rect key="frame" x="0.0" y="24.5" width="315" height="30"/>
+                                        <color key="backgroundColor" red="0.71764705880000002" green="0.81960784310000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.52941176469999995" green="0.59607843140000005" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSk-k4-BkR">
+                                        <rect key="frame" x="0.0" y="62.5" width="315" height="28.5"/>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.65098039220000004" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="NAVIGATE">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name=".SFNSText"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xYx-fH-D6z"/>
+                                            <segue destination="noB-ZD-xzi" kind="show" identifier="showARViewController" id="19Q-4G-Ase"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5305848419015462" green="0.59422202706109306" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N6S-9c-MFW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="ERk-lZ-5Gp"/>
+                            <constraint firstItem="K9r-oc-kqe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Jdj-4W-s44"/>
+                            <constraint firstItem="N6S-9c-MFW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="PcJ-0k-o7H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N6S-9c-MFW" secondAttribute="trailing" constant="138" id="mqn-35-Lms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K9r-oc-kqe" secondAttribute="trailing" constant="30" id="qT7-LP-FVS"/>
+                            <constraint firstItem="K9r-oc-kqe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="xRw-pr-4V5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="destinationTextField" destination="maW-ey-eNI" id="ucs-05-Qby"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="79.610194902548727"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MqQ-6v-tpA">
+            <objects>
+                <viewController id="noB-ZD-xzi" customClass="ARViewController" customModule="AR_Navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jay-4R-sAk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5AY-ve-XJ4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Lb-0F-d6R" firstAttribute="trailing" secondItem="5AY-ve-XJ4" secondAttribute="trailing" id="PqC-UL-O0o"/>
+                            <constraint firstItem="6Lb-0F-d6R" firstAttribute="bottom" secondItem="5AY-ve-XJ4" secondAttribute="bottom" id="XS1-k7-mzN"/>
+                            <constraint firstItem="5AY-ve-XJ4" firstAttribute="top" secondItem="6Lb-0F-d6R" secondAttribute="top" id="kbJ-f2-wiA"/>
+                            <constraint firstItem="5AY-ve-XJ4" firstAttribute="leading" secondItem="6Lb-0F-d6R" secondAttribute="leading" id="sYy-q6-Q6m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Lb-0F-d6R"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="5AY-ve-XJ4" id="igE-vq-l0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ved-NY-V0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iTunesArtwork" width="512" height="512"/>
+    </resources>
+</document>
